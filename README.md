@@ -1,5 +1,5 @@
 # Flask_project
-Flask project of a hypothetical conference, done using an external database.
+Flask project of a hypothetical conference, done using an external database. \\ 
 Here are the main features of the app:
 There is a page of the timetables, with the <div> in different colors and sizes according to the type of talk and the duration. If you click on the title you can access the info of the talks.
 If you click on the small paperclip, you can see the PDF on the talks.
