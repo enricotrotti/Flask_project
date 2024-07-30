@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block maincontent %}
+<title>Conference trip</title>
+    <h1>Conference trip</h1>
+    <h4>We start our journey from Kielce, departing from the city center and heading south along scenic countryside roads. As we leave the urban area behind, the landscape transforms into rolling hills and lush greenery, a characteristic feature of this region.
+
+        Our first stop is the Świętokrzyski National Park, one of Poland's oldest national parks. Known for its pristine forests, unique rock formations, and the legendary Łysa Góra (Bald Mountain), the park offers numerous hiking trails. We can spend an hour or two exploring the natural beauty, perhaps hiking to the summit of Łysa Góra, which provides breathtaking views of the surrounding area.
+        
+        Continuing our journey, we drive towards the charming town of Chęciny. Upon arrival, we head to a local restaurant to enjoy a traditional Polish lunch. We indulge in hearty dishes such as pierogi (dumplings), bigos (hunter's stew), and kiełbasa (sausage), accompanied by fresh local bread and refreshing beverages.
+        
+        After a satisfying meal, we make our way to the highlight of our trip, the Chęciny Castle. This medieval fortress, perched on a hill overlooking the town, is one of the most iconic landmarks in the region. We spend the next couple of hours exploring the castle's grounds, towers, and ramparts. The castle offers a glimpse into Poland's rich history and provides stunning panoramic views of the surrounding countryside.
+        
+        As we wander through the castle, we learn about its historical significance and the various events it has witnessed over the centuries. The knowledgeable guides and informative displays help us appreciate the architectural and cultural heritage of this magnificent site.
+        
+        After our visit to the castle, we take a leisurely stroll through the charming streets of Chęciny, admiring the quaint architecture and soaking in the local atmosphere. We may stop by a café for a coffee or a sweet treat before heading back to Kielce.</h4>
+
+    Maximum {{max_participants}} participants.<br>
+    Registered: {{ participants|count }}
+    Places left: {{ max_participants - participants|count }}<br>
+    {% if participants %}
+    Registered so far:
+    <ol>
+        {% for p in participants %} 
+        <li>{{p.username}}</li>
+        {% endfor %}
+    </ol>      
+    {% endif %}
+
+    {% if participants|count < max_participants %}
+    <h2><a href="/jointrip">Join</a></h2>
+    {% endif %}
+
+    <div class="gallery"><img src="{{ url_for('static', filename='images/chec.jpg') }}" class="image">
+    <img src="{{ url_for('static', filename='images/chec2.jpg') }}" class="image">
+    <img src="{{ url_for('static', filename='images/chec3.jpg') }}" class="image"></div>
+
+{% endblock %}

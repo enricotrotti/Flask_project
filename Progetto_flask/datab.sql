@@ -1,0 +1,6 @@
+-- insert into talk values (4, NULL, 10.30, 30, 'Coffee break', 'Others', NULL, NULL);
+insert into talk values (5, 'Marek Gaździcki', '11.00', 45, 'K_S^0​ meson production in inelastic p+p interactions at 31,40 and 80 GeV/c beam momentum measured by NA61/SHINE at the CERN SPS', 'Experimental', 'Gazdzicki', 'Measurements of \Kshort meson production via its $\pi^{+} \pi^{-}$ decay mode in inelastic \textit{p+p} interactions at incident projectile momenta of 31, 40 and 80~\GeVc ($\sqrt{s_{NN}}=7.7, 8.8$ and $12.3$~\GeV, respectively) are presented. The data were recorded by the \NASixtyOne spectrometer at the CERN Super Proton Synchrotron. Double-differential distributions were obtained in transverse momentum and rapidity. The mean multiplicities of \Kshort mesons were determined to be $(5.95 \pm 0.19 (stat) \pm 0.22 (sys)) \times 10^{-2}$ at 31~\GeVc, $(7.61 \pm 0.13 (stat) \pm 0.31 (sys)) \times 10^{-2}$ at 40~\GeVc and $(11.58 \pm 0.12 (stat) \pm 0.37 (sys)) \times 10^{-2}$ at 80~\GeVc. The results on $K^{0}_{S}$ production are compared with model calculations (\EposLong, SMASH 2.0 and PHSD) as well as with published data from other experiments. ');
+-- ALTER TABLE talk MODIFY Start varchar(10);
+-- UPDATE talk SET Start = '10.30' WHERE Id = 4;
+select * from talk;
+select * from person

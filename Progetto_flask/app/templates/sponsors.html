@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block maincontent %}
+    <h1>Sponsors</h1>
+
+    <div class="gallery">
+        <div><h3>Quantum Quenchers - “Hydrate your atoms with the drink of the future!”</h3><img src="{{ url_for('static', filename='images/QQ.jpeg') }}" class="image"></div>
+        <div><h3>Mystic Munchies - “Snacks that are out of this world!”</h3><img src="{{ url_for('static', filename='images/MM.jpeg') }}" class="image"></div>
+        <div><h3>Time Traveler Tailors - “Fashion that transcends eras.”</h3><img src="{{ url_for('static', filename='images/TTT.jpeg') }}" class="image"></div>
+        <div><h3>Eco Elixirs - “Potions brewed with the finest ingredients in nature.”</h3><img src="{{ url_for('static', filename='images/EE.jpeg') }}" class="image"></div>
+        <div><h3>Virtual Ventures - “Experience adventures without leaving your seat.”</h3><img src="{{ url_for('static', filename='images/VV.jpeg') }}" class="image"></div>
+        <div><h3>Stellar Studios - “Where your dreams become cinematic reality.”</h3><img src="{{ url_for('static', filename='images/SS.jpeg') }}" class="image"></div>
+        <div><h3>Fantasy Flights - “Travel to realms beyond imagination.”</h3><img src="{{ url_for('static', filename='images/FF.jpeg') }}" class="image"></div>
+        <div><h3>Relativistic Rhythm - “Feel the beat that bends time and space!”</h3><img src="{{ url_for('static', filename='images/RR.jpeg') }}" class="image"></div>
+    </div>
+
+{% endblock %}

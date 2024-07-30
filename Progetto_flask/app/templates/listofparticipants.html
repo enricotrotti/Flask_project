@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+    {% block maincontent %}
+        <h1>List of Participants now</h1>
+
+        <ol>
+    {% for person in person %} 
+        <li><h3>{{person.Name}},</h3> <h4>{{person.Institution}}</h4></li>
+    {% endfor %}
+    </ol> 
+{% endblock %}
+

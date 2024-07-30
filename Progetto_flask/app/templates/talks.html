@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block maincontent %}
+<title>Timetable: Day 1</title>
+    <h1>Timetable: Day 1</h1>
+    <h2>Starting <b>8.45</b></h2>
+    <div class="talk talk-theobox">Theoretical</div>
+    <div class="talk talk-expbox">Experimental</div><br><br><br><hr>
+    {% for talk in talks %}
+    <div class="timetable">
+        <div class="talk talk-{{talk.Area}}">
+            <div class="talk talk-{{talk.Duration}}">
+                <h2><a href="/talks/{{talk.Id}}">{{ talk.Title }}</a></h2>
+                <p style="text-align:left;"> Starting: 
+                    <strong>{{talk.Start}}</strong>
+                    {% if talk.Speaker %}
+                    <span style="float:right;">
+                        Speaker: <em>{{ talk.Speaker }}</em>
+                    </span>
+                    {% endif %}
+                </p>
+                <p style="text-align:left;">
+                    Duration: <strong>{{talk.Duration}}</strong>
+                </p>
+                {% if talk.pdf %}
+                <a class="pdf-link" href="{{ url_for('static', filename='files/{{talk.pdf}}.pdf') }}" target="_blank" >📎</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+<!-- 
+    <div class="timetable">
+        <div class="talk talk-exp">
+            <div class="talk talk-45">
+                <h2>Talk 2</h2>
+                <p style="text-align:left;">
+                    <strong>9.45-10.30</strong>
+                    <span style="float:right;">
+                        Speaker: <em>CCC</em>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="timetable">
+        <div class="talk talk-coffee">
+            <div class="talk talk-30">
+                <h2>Coffee break</h2>
+                <p style="text-align:left;">
+                    <strong>10.30-11</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="timetable">
+        <div class="talk talk-theo">
+            <div class="talk talk-30">
+                <h2>Talk 3</h2>
+                <p style="text-align:left;">
+                    <strong>11-11.30</strong>
+                    <span style="float:right;">
+                        Speaker: <em>DDD</em>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="timetable">
+        <div class="talk talk-exp">
+            <div class="talk talk-30">
+                <h2>Talk 4</h2>
+                <p style="text-align:left;">
+                    <strong>11.30-12</strong>
+                    <span style="float:right;">
+                        Speaker: <em>EEE</em>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="timetable">
+        <div class="talk talk-theo">
+            <div class="talk talk-15">
+                <h2>Talk 5</h2>
+                <p style="text-align:left;">
+                    <strong>12-12.15</strong>
+                    <span style="float:right;">
+                        Speaker: <em>FFF</em>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="timetable">
+        <div class="talk talk-theo">
+            <div class="talk talk-15">
+                <h2>Talk 6</h2>
+                <p style="text-align:left;">
+                    <strong>12.15-12.30</strong>
+                    <span style="float:right;">
+                        Speaker: <em>GGG</em>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="timetable">
+        <div class="talk talk-coffee">
+            <div class="talk talk-45">
+                <h2>Lunch</h2>
+                <p style="text-align:left;">12.30-13.15</p>
+            </div>
+        </div>
+    </div>
+    <div class="timetable">
+        <div class="talk talk-coffee">
+            <div class="talk afternoon">
+                <h2>Conference trip</h2>
+                <p style="text-align:left;"
+                >13.15-19.30</p>
+            </div>
+        </div>
+    </div> -->
+
+    {% endblock %}
+  

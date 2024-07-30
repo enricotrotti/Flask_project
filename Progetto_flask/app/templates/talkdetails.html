@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block maincontent %}
+{% if talk.Speaker %}
+<title>Contribution: {{talk.Speaker}}</title>
+{% else %}
+<title>{{talk.Title}}</title>
+{% endif %}
+
+    <h1>{{ talk.Title }}</h1>
+    {% if talk.Speaker %}
+    <h2>Speaker: {{ talk.Speaker }}</h2>
+    {% endif %}
+    {% if talk.Title== 'Conference Trip' %}
+    <a href="/trip">Trip info</a>
+    {% endif %}
+    {% if talk.Title== 'Conference Dinner' %}
+    <a href="/dinner">Dinner info</a>
+    {% endif %}
+
+<ul>
+{% if talk.Abstract %}
+<li><h3>Abstract: </h3></li>
+<li><h4>{{ talk.Abstract }}</h4></li>
+</ul> 
+{% endif %}
+{% endblock %}
+  

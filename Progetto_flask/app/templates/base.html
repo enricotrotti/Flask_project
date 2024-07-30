@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="indexbkg">
+        <!-- <div class="transbox"> -->
+        <div class="container">
+            <h1>KETCHUP 2024</h1>
+        </div>
+    <!-- </div> -->
+    </div>
+    <div class="menu">
+      <a href="/">Home</a> | <a href="/talks">Talks</a> | <a href="/listofparticipants">List of participants</a> | <a href="/sponsors">Sponsors</a> | <a href="/conferencephoto">Photo</a> | <a href="/dinner">Conference dinner</a> | <a href="/trip">Conference trip</a> | <a href="/crea-utente">Create new user (only admin)</a>
+    </div> 
+    <div class="login">
+        {% if session.username %}
+        {{session.username}} <a href="/logout">Logout</a>
+        {% else %}
+        <a href="/login">Login</a>
+        {% endif %}
+    </div>
+    {% block maincontent %}
+    {% endblock %}
+    {%include 'footer.html' %}
+</body>
+</html>

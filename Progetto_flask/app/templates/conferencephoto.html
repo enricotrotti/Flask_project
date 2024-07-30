@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block maincontent %}
+
+{%     if session.username  %}
+
+<div class="gallery"><img src="{{ url_for('static', filename='images/photo1.jpeg') }}" class="image">
+    <img src="{{ url_for('static', filename='images/photo2.jpeg') }}" class="image">
+    <img src="{{ url_for('static', filename='images/photo3.jpeg') }}" class="image"></div>
+{% else %}
+<h2>You must be logged to see this content ('Admin', 'abc123')</h2>
+{% endif %}
+
+{% endblock %}
