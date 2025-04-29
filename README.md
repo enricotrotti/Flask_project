@@ -11,5 +11,5 @@ The sponsors and the Conference photo are AI generated. \
 You can access the photos only if you are logged in, and you can create new user only if you are logged in as Admin. \
 ![](./pic5.png)\
 You can also join the conference trip if you are logged in, up to 25 places. There is also a countdown counting the places left for the trip.\
-![](./pic6.png)\
+![](./pic6.png)
 
